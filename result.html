@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="result-center">
+  <div class="glass-card center">
+    <h1>Your Result</h1>
+    <h2 id="score"></h2>
+
+    <div class="score-bar-container">
+      <div class="score-bar" id="scoreBar"></div>
+    </div>
+
+    <p id="analysis"></p>
+
+    <a href="coping.html">
+      <button class="glow-btn">Learn How to Improve</button>
+    </a>
+  </div>
+</div>
+
+<div class="page-transition" id="pageTransition"></div>
+
+<script>
+let score = parseInt(localStorage.getItem("score"));
+
+document.getElementById("score").innerText = "Score: " + score + "/10";
+
+let analysis = "";
+let color = "";
+
+if (score <= 3) {
+  analysis = "You are confident and independent.";
+  color = "#00ff88";
+} else if (score <= 7) {
+  analysis = "You are moderately influenced.";
+  color = "#ffaa00";
+} else {
+  analysis = "You are highly influenced.";
+  color = "#ff416c";
+}
+
+document.getElementById("analysis").innerText = analysis;
+
+const bar = document.getElementById("scoreBar");
+const percent = (score / 10) * 100;
+
+setTimeout(() => {
+  bar.style.width = percent + "%";
+  bar.style.background = color;
+}, 300);
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

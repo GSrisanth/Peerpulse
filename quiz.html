@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="center">Peer Pressure Self Assessment</h1>
+
+<div class="quiz-container">
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <p class="progress-text" id="progressText">Question 1/10</p>
+
+  <div class="glass-card center">
+    <h2 id="questionText"></h2>
+    <button class="glow-btn" onclick="answer(1)">Yes</button>
+    <button class="glow-btn" onclick="answer(0)">No</button>
+  </div>
+
+</div>
+
+<div class="page-transition" id="pageTransition"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

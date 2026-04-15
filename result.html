@@ -9,7 +9,7 @@
 <div class="result-center">
   <div class="glass-card center">
     <h1>Your Result</h1>
-    <h2 id="score"></h2>
+    <h2>Your Influence Level</h2>
 
     <div class="score-bar-container">
       <div class="score-bar" id="scoreBar"></div>
@@ -28,7 +28,7 @@
 <script>
 let score = parseInt(localStorage.getItem("score"));
 
-document.getElementById("score").innerText = "Score: " + score + "/10";
+
 
 let analysis = "";
 let color = "";
